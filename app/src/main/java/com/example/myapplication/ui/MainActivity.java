@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Adapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
@@ -23,21 +24,26 @@ public class MainActivity extends AppCompatActivity {
     private Adapter homeAdapter;
 
     //arrays of images and title
-    TextView tap;
+    TextView tap,data,value;
     RecyclerView dataList;
     List<String> titles;
     List<Integer> images;
     Adapterhome adapter;
-
+    LinearLayout ct;
+    int k=0;
+    public String[] options={"<REFERRAL INCOME>","<GENERATION BONUS>","<DAILY WORK BONUS>"};
+    public String[] am={"50500৳","20125৳","940৳"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dataList = findViewById(R.id.rec);
         tap= findViewById(R.id.tap);
+        value=findViewById(R.id.data2);
         titles = new ArrayList<>();
         images = new ArrayList<>();
-
+        data=findViewById(R.id.data);
+        ct=findViewById(R.id.contentTOP);
         titles.add("Wallet");
         titles.add("Register");
         titles.add("Cashout");
@@ -99,7 +105,19 @@ public class MainActivity extends AppCompatActivity {
         images.add(R.drawable.p4);
         images.add(R.drawable.p5);
         adapter = new Adapterhome(this,titles,images);
+        ct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                data.setText(options[k]);
+                value.setText(am[k]);
+                k=k+1;
+                if(k>=3)
+                {
+                    k=0;
+                }
+            }
+        });
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
         dataList.setLayoutManager(gridLayoutManager);
         dataList.setAdapter(adapter);

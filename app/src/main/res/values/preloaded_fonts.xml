@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/aldrich</item>
         <item>@font/audiowide</item>
         <item>@font/basic</item>
         <item>@font/cabin_semibold</item>
@@ -10,7 +11,10 @@
         <item>@font/changa_medium</item>
         <item>@font/concert_one</item>
         <item>@font/days_one</item>
+        <item>@font/delius_unicase_bold</item>
         <item>@font/doppio_one</item>
+        <item>@font/droid_sans_bold</item>
+        <item>@font/electrolize</item>
         <item>@font/graduate</item>
         <item>@font/michroma</item>
         <item>@font/prosto_one</item>
