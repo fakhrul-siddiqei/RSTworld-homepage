@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     Adapterhome adapter;
     LinearLayout ct;
     int k=0;
-    public String[] options={"<REFERRAL INCOME>","<GENERATION BONUS>","<DAILY WORK BONUS>"};
+    public String[] options={"REFERRAL INCOME","GENERATION BONUS","DAILY WORK BONUS>"};
     public String[] am={"50500৳","20125৳","940৳"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
